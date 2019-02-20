@@ -2,23 +2,37 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>L'Air DnD</title>
   
-  <link rel="stylesheet" type="text/css" media="screen" href=styles/main.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
 
 </head>
 <body>
-  <div id="reservation"></div>
+  <div class="container">
+    <div class="top">
+      <img id="topImg" src="assets/Top.png" alt="top" width="100%" />
+    </div>
+    <div class="body">
+      <div class="left">
+        <img id="leftImg" src="assets/LeftDescr.png" alt="left" width="100%" />
+      </div>
+      <div class="right">
+        <div id="reservation"></div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
   
-  <script src="http://localhost:3003/App/js"></script>
+  <script src="http://localhost:3003/bundle.js"></script>
   <script>
     ReactDOM.render(
-      React.createElement(Reservation),
+      React.createElement(Reservation, {
+        offeringId: 4,
+        guestId: 2,
+      }),
       document.getElementById('reservation')
     );
   </script>

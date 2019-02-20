@@ -1,16 +1,20 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
+  "name": "lairdndproxy",
+  "version": "1.0.0",
+  "description": "Eric Cuyle's proxy server for FEC",
+  "author": "Eric Cuyle",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
   },
-  "scripts": {},
+  "scripts": {
+    "start": "node server/server.js",
+    "nstart": "nodemon server/server.js"
+  },
   "dependencies": {
     "express": "^4.16.4",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.10"
   },
   "devDependencies": {
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
