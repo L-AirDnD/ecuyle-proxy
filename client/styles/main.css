@@ -18,7 +18,16 @@
 
 .left {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+}
+
+.img {
+  text-align: center;
+}
+
+.fixedReservations {
+  position: fixed;
+  top: 15px;
 }
 
 .right {

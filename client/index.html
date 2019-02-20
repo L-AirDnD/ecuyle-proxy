@@ -11,11 +11,23 @@
 <body>
   <div class="container">
     <div class="top">
-      <img id="topImg" src="assets/Top.png" alt="top" width="100%" />
+      <!-- <img id="topImg" src="assets/Top.png" alt="top" width="100%" /> -->
+      <div id="photos"></div>
     </div>
     <div class="body">
       <div class="left">
-        <img id="leftImg" src="assets/LeftDescr.png" alt="left" width="100%" />
+        <div class="img">
+          <img src="assets/LeftDescr.png" alt="left" width="85%" />
+        </div>
+        <div class="img">
+          <img src="assets/LeftDescr2.png" alt="left" width="85%" />
+        </div>
+        <div class="img">
+          <img src="assets/LeftDescr3.png" alt="left" width="85%" />
+        </div>
+        <div id="">
+          <div id="reviews"></div>
+        </div>
       </div>
       <div class="right">
         <div id="reservation"></div>
@@ -26,6 +38,9 @@
   <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
   
+  <script src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script>
+  <script src="http://localhost:3001/bundle.js"></script>
+  <script src="http://localhost:3002/dist/bundle.js"></script>
   <script src="http://localhost:3003/bundle.js"></script>
   <script>
     ReactDOM.render(
@@ -34,6 +49,14 @@
         guestId: 2,
       }),
       document.getElementById('reservation')
+    );
+    ReactDOM.render(
+      React.createElement(Photos),
+      document.getElementById('photos')
+    );
+    ReactDOM.render(
+      React.createElement(Review),
+      document.getElementById('reviews')
     );
   </script>
 </body>
