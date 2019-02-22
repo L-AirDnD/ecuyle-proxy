@@ -43,9 +43,14 @@
   <script src="http://lairdndreviews.us-east-1.elasticbeanstalk.com/dist/bundle.js"></script>
   <script src="http://ec2-3-16-89-36.us-east-2.compute.amazonaws.com/bundle.js"></script>
   <script>
+    let offeringId = window.location.pathname.slice(1);
+    if (typeof parseInt(offeringId) !== 'number' || parseInt(offeringId) > 100) {
+      window.location.href = '/1';
+    }
+    if (offeringId === '') offeringId = 1;
     ReactDOM.render(
       React.createElement(Reservation, {
-        offeringId: 4,
+        offeringId,
         guestId: 2,
       }),
       document.getElementById('reservation')
